@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-k8s-config-deployment
+  labels:
+    app: spring-k8s-config
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-k8s-config
+  template:
+    metadata:
+      labels:
+        app: spring-k8s-config
+    spec:
+      containers:
+        - name: spring-k8s-config
+          image: docker.local:5000/spring-k8s-conf:0.1.0
+          ports:
+            - containerPort: 8080

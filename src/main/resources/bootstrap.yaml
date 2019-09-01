@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: kube-config-map-sample
+  cloud:
+    kubernetes:
+      config:
+        sources:
+          -
+            name: hello
+            namespace: default

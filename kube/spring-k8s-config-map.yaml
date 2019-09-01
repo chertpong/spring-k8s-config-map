@@ -1,0 +1,10 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: hello
+data:
+  application.yaml: |-
+    hello:
+      message: Hello from config map!!
+    business:
+      message: omg from config map!
